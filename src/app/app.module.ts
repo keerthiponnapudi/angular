@@ -14,7 +14,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 //import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-
+import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     HttpClientModule,
     MatInputModule,
     FormsModule,
+    MatTableModule,
+    MatSortModule,
     BrowserAnimationsModule
   ],
   providers: [],

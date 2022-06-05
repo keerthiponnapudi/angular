@@ -1,4 +1,3 @@
-
 <div class="container-fluid tool-board">
     <br>
     <br/>
@@ -122,5 +121,133 @@
         </div>
     </div>
 
-</div>
+    <p>Result</p>
+    <mat-form-field appearance="standard">
+        <mat-label>Search</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. abc" #input>
+      </mat-form-field>
+    <table mat-table [dataSource]="dataSource" matSort 
+    class="mat-elevation-z8">
 
+  <!-- Position Column -->
+  <ng-container matColumnDef="part_id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
+      Part ID
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.part_id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="part_desc">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name">
+      Part Desc
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.part_desc}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="supp_name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by weight">
+      Supp Name
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.supp_name}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="supp_id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Supp ID
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.supp_id}} </td>
+  </ng-container>
+  <ng-container matColumnDef="on_cont">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      On Cont?
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.on_cont}} </td>
+  </ng-container>
+  <ng-container matColumnDef="cont">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Cont#
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.cont}} </td>
+  </ng-container>
+  <ng-container matColumnDef="cert_status">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Cert Status
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.cert_status}} </td>
+  </ng-container>
+  <ng-container matColumnDef="stock">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Stock
+    <td mat-cell *matCellDef="let element"> {{element.stock}} </td>
+  </ng-container>
+  <ng-container matColumnDef="psv">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      PSV
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.psv}} </td>
+  </ng-container>
+  <ng-container matColumnDef="factor">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Factor
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.factor}} </td>
+  </ng-container>
+  <ng-container matColumnDef="disc">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Disc
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.disc}} </td>
+  </ng-container>
+  <ng-container matColumnDef="last_po_cost">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Last PO Cost
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.last_po_cost}} </td>
+  </ng-container>
+  <ng-container matColumnDef="boeing_price">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Boeing Price
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.boeing_price}} </td>
+  </ng-container>
+  <ng-container matColumnDef="prod_cost">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Prod Cost
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.prod_cost}} </td>
+  </ng-container>
+  <ng-container matColumnDef="unq_sp_cost">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Unq Sp Cost
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.unq_sp_cost}} </td>
+  </ng-container>
+  <ng-container matColumnDef="sppc_cost">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      SPPC Cost
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.sppc_cost}} </td>
+  </ng-container>
+  <ng-container matColumnDef="appr_cost">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Appr Cost
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.appr_cost}} </td>
+  </ng-container>
+  <ng-container matColumnDef="appr">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
+      Appr 
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.appr}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+
+
+</div>
