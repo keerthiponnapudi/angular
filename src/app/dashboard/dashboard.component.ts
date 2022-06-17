@@ -48,6 +48,8 @@ benchData(){
     this.benchrowData=data;
     this.dataSourceBench= new MatTableDataSource(this.benchrowData);
     this.dataSourceBench.sort=this.sort;
+    this.dataSourceBench.paginator=this.paginator;
+    this.paginator._intl.itemsPerPageLabel = 'Rows per page'
   })
   
 }
